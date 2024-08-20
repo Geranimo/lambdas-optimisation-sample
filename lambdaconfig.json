@@ -1,0 +1,6 @@
+{
+  "computePiService": 512,
+  "computeFactorialService": 128,
+  "matrixMultiplyService": 640
+
+}

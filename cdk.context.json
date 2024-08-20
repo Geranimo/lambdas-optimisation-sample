@@ -1,0 +1,5 @@
+{
+  "ssm:account=818338972021:parameterName=/lambda/function/computePiService/memory:region=us-west-2": "624",
+  "ssm:account=818338972021:parameterName=/lambda/function/computeFactorialService/memory:region=us-west-2": "160",
+  "ssm:account=818338972021:parameterName=/lambda/function/matrixMultiplyService/memory:region=us-west-2": "640"
+}

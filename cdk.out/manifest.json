@@ -1,0 +1,192 @@
+{
+  "version": "36.0.0",
+  "artifacts": {
+    "assembly-LambdaPipelineStackV2-Deployv2": {
+      "type": "cdk:cloud-assembly",
+      "properties": {
+        "directoryName": "assembly-LambdaPipelineStackV2-Deployv2",
+        "displayName": "LambdaPipelineStackV2/Deployv2"
+      }
+    },
+    "LambdaPipelineStackV2.assets": {
+      "type": "cdk:asset-manifest",
+      "properties": {
+        "file": "LambdaPipelineStackV2.assets.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+      }
+    },
+    "LambdaPipelineStackV2": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://818338972021/us-west-2",
+      "properties": {
+        "templateFile": "LambdaPipelineStackV2.template.json",
+        "terminationProtection": false,
+        "validateOnSynth": false,
+        "assumeRoleArn": "arn:${AWS::Partition}:iam::818338972021:role/cdk-hnb659fds-deploy-role-818338972021-us-west-2",
+        "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::818338972021:role/cdk-hnb659fds-cfn-exec-role-818338972021-us-west-2",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-818338972021-us-west-2/20351244585c4d1cb249db7457667956c7b75e8396305c5887ca996abbfe7b7f.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
+        "additionalDependencies": [
+          "LambdaPipelineStackV2.assets"
+        ],
+        "lookupRole": {
+          "arn": "arn:${AWS::Partition}:iam::818338972021:role/cdk-hnb659fds-lookup-role-818338972021-us-west-2",
+          "requiresBootstrapStackVersion": 8,
+          "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+        }
+      },
+      "dependencies": [
+        "LambdaPipelineStackV2.assets"
+      ],
+      "metadata": {
+        "/LambdaPipelineStackV2/Pipeline/Pipeline/ArtifactsBucket/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PipelineArtifactsBucketAEA9A052"
+          }
+        ],
+        "/LambdaPipelineStackV2/Pipeline/Pipeline/ArtifactsBucket/Policy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PipelineArtifactsBucketPolicyF53CCC52"
+          }
+        ],
+        "/LambdaPipelineStackV2/Pipeline/Pipeline/Role/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PipelineRoleB27FAA37"
+          }
+        ],
+        "/LambdaPipelineStackV2/Pipeline/Pipeline/Role/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PipelineRoleDefaultPolicy7BDC1ABB"
+          }
+        ],
+        "/LambdaPipelineStackV2/Pipeline/Pipeline/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "Pipeline9850B417"
+          }
+        ],
+        "/LambdaPipelineStackV2/Pipeline/Pipeline/Source/Geranimo_lambdas-optimisation-sample/CodePipelineActionRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PipelineSourceGeranimolambdasoptimisationsampleCodePipelineActionRoleE11B34AD"
+          }
+        ],
+        "/LambdaPipelineStackV2/Pipeline/Pipeline/Source/Geranimo_lambdas-optimisation-sample/CodePipelineActionRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PipelineSourceGeranimolambdasoptimisationsampleCodePipelineActionRoleDefaultPolicy15288D49"
+          }
+        ],
+        "/LambdaPipelineStackV2/Pipeline/Pipeline/Build/SynthStep/CdkBuildProject/Role/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PipelineBuildSynthStepCdkBuildProjectRole2407DBD0"
+          }
+        ],
+        "/LambdaPipelineStackV2/Pipeline/Pipeline/Build/SynthStep/CdkBuildProject/Role/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PipelineBuildSynthStepCdkBuildProjectRoleDefaultPolicy3CD6B151"
+          }
+        ],
+        "/LambdaPipelineStackV2/Pipeline/Pipeline/Build/SynthStep/CdkBuildProject/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PipelineBuildSynthStepCdkBuildProject7FBB5116"
+          }
+        ],
+        "/LambdaPipelineStackV2/Pipeline/CodeBuildActionRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PipelineCodeBuildActionRole226DB0CB"
+          }
+        ],
+        "/LambdaPipelineStackV2/Pipeline/CodeBuildActionRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PipelineCodeBuildActionRoleDefaultPolicy1D62A6FE"
+          }
+        ],
+        "/LambdaPipelineStackV2/Pipeline/UpdatePipeline/SelfMutation/Role/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PipelineUpdatePipelineSelfMutationRole57E559E8"
+          }
+        ],
+        "/LambdaPipelineStackV2/Pipeline/UpdatePipeline/SelfMutation/Role/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PipelineUpdatePipelineSelfMutationRoleDefaultPolicyA225DA4E"
+          }
+        ],
+        "/LambdaPipelineStackV2/Pipeline/UpdatePipeline/SelfMutation/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PipelineUpdatePipelineSelfMutationDAA41400"
+          }
+        ],
+        "/LambdaPipelineStackV2/Pipeline/Assets/FileRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PipelineAssetsFileRole59943A77"
+          }
+        ],
+        "/LambdaPipelineStackV2/Pipeline/Assets/FileRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PipelineAssetsFileRoleDefaultPolicy14DB8755"
+          }
+        ],
+        "/LambdaPipelineStackV2/Pipeline/Assets/FileAsset1/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PipelineAssetsFileAsset185A67CB4"
+          }
+        ],
+        "/LambdaPipelineStackV2/Pipeline/Assets/FileAsset2/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PipelineAssetsFileAsset24D2D639B"
+          }
+        ],
+        "/LambdaPipelineStackV2/Pipeline/Assets/FileAsset3/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PipelineAssetsFileAsset3FE71B523"
+          }
+        ],
+        "/LambdaPipelineStackV2/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata"
+          }
+        ],
+        "/LambdaPipelineStackV2/BootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BootstrapVersion"
+          }
+        ],
+        "/LambdaPipelineStackV2/CheckBootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CheckBootstrapVersion"
+          }
+        ]
+      },
+      "displayName": "LambdaPipelineStackV2"
+    },
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    }
+  }
+}
