@@ -1,6 +1,1 @@
-{
-  "computePiService": 512,
-  "computeFactorialService": 128,
-  "matrixMultiplyService": 640
-
-}
+{"computeFactorialService":192,"computePiService":752,"matrixMultiplyService":768}
